@@ -344,7 +344,7 @@
                 </div>
                 <div class="content">
                   <h6 class="mb-10">Stok</h6>
-                  <h3 class="text-bold mb-10">215</h3>
+                  <h3 class="text-bold mb-10">2</h3>
                   <p class="text-sm text-success">
                     <i class="lni lni-arrow-up"></i> +2.00%
                     <span class="text-gray">(30 days)</span>
@@ -361,7 +361,7 @@
                 </div>
                 <div class="content">
                   <h6 class="mb-10">Total Pembelian</h6>
-                  <h3 class="text-bold mb-10">RP 1.500.000</h3>
+                  <h3 class="text-bold mb-10">RP 150.000</h3>
                   <p class="text-sm text-success">
                     <i class="lni lni-arrow-up"></i> +5.45%
                     <span class="text-gray">Increased</span>
@@ -378,7 +378,7 @@
                 </div>
                 <div class="content">
                   <h6 class="mb-10">Total Laporan</h6>
-                  <h3 class="text-bold mb-10">18</h3>
+                  <h3 class="text-bold mb-10">9</h3>
                   <p class="text-sm text-danger">
                     <i class="lni lni-arrow-down"></i> -2.00%
                     <span class="text-gray">Expense</span>
@@ -400,7 +400,7 @@
                 <div class="title d-flex flex-wrap justify-content-between">
                   <div class="left">
                     <h6 class="text-medium mb-10">Grafik Pembelian</h6>
-                    <h3 class="text-bold">1.800.000</h3>
+                    <h3 class="text-bold">800.000</h3>
                   </div>
                   <div class="right">
                     <div class="select-style-1">

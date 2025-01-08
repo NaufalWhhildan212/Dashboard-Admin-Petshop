@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\StokController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,14 +21,10 @@ Route::get('/Dashboard', function () {
     return view('Index');
 });
 
-Route::get('/Stok', function () {
-    return view('Stok');
-});
-
-Route::get('/Input-Stok', function () {
-    return view('Input-Stok');
-});
-
-Route::get('/Pembelian', function () {
-    return view('Pembelian');
-});
+Route::get('/Stok',[StokController::class,'index']);
+Route::get('/Input-Stok',[StokController::class,'create']);
+Route::post('/Stok-proses',[StokController::class,'store']);
+Route::get('/Stok-Edit/{id}',[StokController::class,'edit']);
+Route::post('/Stok-Update/{id}',[StokController::class,'update']);
+Route::get('/Stok-Delete/{id}',[StokController::class,'destroy']);
+Route::get('/Stok-cetak',[StokController::class,'downloadpdf']);

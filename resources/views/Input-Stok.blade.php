@@ -409,14 +409,15 @@
         
           <div class="container">
             <h2>Input Stok</h2>
-            <form action="#" method="POST">
+            <form action="Stok-proses" method="post">
+                {{csrf_field()}}
               <!-- Nama Barang -->
-              <label for="nama_barang">Nama Produk</label>
-              <input type="text" id="nama_produk" name="nama_produk" placeholder="Masukkan nama Produk" required />
+              <label for="Nama">Nama Produk</label>
+              <input type="text" id="Nama" name="Nama" placeholder="Masukkan nama Produk" required />
         
               <!-- Kategori -->
-              <label for="kategori">Kategori</label>
-              <select id="kategori" name="kategori" required>
+              <label for="Kategori">Kategori</label>
+              <select id="Kategori" name="Kategori" required>
                 <option value="">Pilih kategori</option>
                 <option value="Makanan">Makanan</option>
                 <option value="Obat">Obat</option>
@@ -425,15 +426,15 @@
               </select>
         
               <!-- Harga -->
-              <label for="harga">Harga</label>
-              <input type="number" id="harga" name="harga" placeholder="Masukkan harga barang" required />
+              <label for="Harga">Harga</label>
+              <input type="number" id="Harga" name="Harga" placeholder="Masukkan harga barang" required />
         
               <!-- Stok -->
-              <label for="nama_supplier">Nama Supplier</label>
-              <input type="text" id="nama_supplier" name="nama_supplier" placeholder="Masukkan nama Supplier" required />
+              <label for="Supplier">Nama Supplier</label>
+              <input type="text" id="Supplier" name="Supplier" placeholder="Masukkan nama Supplier" required />
 
-              <label for="stok">Stok</label>
-              <input type="number" id="stok" name="stok" placeholder="Masukkan Jumlah Stok" required />
+              <label for="Stok">Stok</label>
+              <input type="number" id="Stok" name="Stok" placeholder="Masukkan Jumlah Stok" required />
         
               <!-- Tombol Submit -->
               <button type="submit">Simpan</button>

@@ -8,12 +8,11 @@
     <title>Dashboard Petshop</title>
 
     <!-- ========== All CSS files linkup ========= -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/lineicons.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="assets/css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="assets/css/fullcalendar.css" />
-    <link rel="stylesheet" href="assets/css/fullcalendar.css" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/lineicons.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/materialdesignicons.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/fullcalendar.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
   </head>
   <body>
     <!-- ======== Preloader =========== -->
@@ -26,7 +25,7 @@
     <aside class="sidebar-nav-wrapper">
       <div class="navbar-logo">
         <a href="index.html">
-          <img src="assets/images/logo/Logo-petshop.jpg" alt="logo" width="150" height="auto" />
+        <img src="{{ asset('assets/images/logo/Logo-petshop.jpg') }}" alt="logo" width="150" height="auto">
         </a>
       </div>
       <nav class="sidebar-nav">
@@ -72,7 +71,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="Pembelian">
+            <a href="Pembelian.html">
               <span class="icon">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -337,141 +336,115 @@
           </div>
           <!-- ========== title-wrapper end ========== -->
           <style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f9;
-        margin: 0;
-        padding: 0;
-    }
-    header {
-        background-color: #4845f3;
-        color: white;
-        padding: 20px;
-        text-align: center;
-    }
-    header h1 {
-        color: white;  /* Mengubah warna teks h1 menjadi putih */
-    }
-    .container {
-        padding: 20px;
-    }
-    .button-container {
-        margin-bottom: 20px;
-        text-align: left; /* Menempatkan tombol ke kiri */
-    }
-    .btn {
-        background-color: #4845f3;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
-        border-radius: 5px;
-        margin-right: 10px; /* Jarak antar tombol */
-        transition: background-color 0.3s;
-    }
-    .btn:hover {
-        background-color: #ecf802ee;
-        color: rgb(7, 2, 2);
-    }
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 20px;
-    }
-    table, th, td {
-        border: 1px solid #ddd;
-    }
-    th, td {
-        padding: 12px;
-        text-align: center;
-    }
-    th {
-        background-color: #4845f3;
-        color: white;
-    }
-    td {
-        background-color: #f9f9f9;
-    }
-    .table-container {
-        overflow-x: auto;
-    }
-    .footer {
-        text-align: center;
-        margin-top: 30px;
-        padding: 10px;
-        background-color: #4845f3;
-        color: white;
-    }
-    .action-btns {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-    }
-    .action-btns button {
-        padding: 5px 10px;
-        font-size: 12px;
-        cursor: pointer;
-        border-radius: 5px;
-    }
-    .update-btn {
-        background-color: #28a745; /* Hijau untuk tombol update */
-        color: white;
-    }
-    .delete-btn {
-        background-color: #dc3545; /* Merah untuk tombol delete */
-        color: white;
-    }
-    .update-btn:hover {
-        background-color: #218838;
-    }
-    .delete-btn:hover {
-        background-color: #c82333;
-    }
-</style>
-    </head>
-    <body>
-        <header>
-            <h1>Petshop - Pengelolaan Stok</h1>
-        </header>
-    
-        <div class="container">
-            <div class="button-container">
-              <a href="Input-Stok" class="btn" id="inputPembelianBtn">Input Stok</a>
-              <a href="Stok-cetak" class="btn" id="cetakPembelianBtn">Cetak Stok</a>
-            </div>
-    
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ID Stok</th>
-                            <th>Nama Produk</th>
-                            <th>Kategori</th>
-                            <th>Harga</th>
-                            <th>Nama Supplier</th>
-                            <th>Stok</th>
-                            <th>Aksi</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                        @foreach($dtStok as $item)
-                        <td>{{$item->id}}</td>
-                            <td>{{$item->Nama}}</td>
-                            <td>{{$item->Kategori}}</td>
-                            <td>{{$item->Harga}}</td>
-                            <td>{{$item->Supplier}}</td>
-                            <td>{{$item->Stok}}</td>
-                            <td class="action-btns">
-                            <a href="{{ url('Stok-Edit', $item->id) }}"><button class="update-btn">Update</button></a>
-                            <a href="{{ url('Stok-Delete', $item->id) }}"><button class="delete-btn">Delete</button></a>
-                            </tr>
-                            @endforeach
-                    </tbody>
-                </table>
-            </div>
-        </div>
+            body {
+              font-family: Arial, sans-serif;
+              margin: 0;
+              padding: 0;
+              background-color: #f4f5f7;
+            }
+        
+            .container {
+              max-width: 600px;
+              margin: 30px auto;
+              padding: 20px;
+              background: #ffffff;
+              border-radius: 8px;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+        
+            h2 {
+              text-align: center;
+              margin-bottom: 20px;
+              color: #333;
+            }
+        
+            form label {
+              display: block;
+              margin-bottom: 8px;
+              font-weight: bold;
+              color: #555;
+            }
+        
+            form input, form select, form button {
+              width: 100%;
+              padding: 10px;
+              margin-bottom: 15px;
+              border: 1px solid #ddd;
+              border-radius: 4px;
+              font-size: 16px;
+            }
+        
+            form input:focus, form select:focus {
+              border-color: #4845f3;
+              outline: none;
+            }
+        
+            form button {
+              background-color: #4845f3;
+              color: white;
+              border: none;
+              cursor: pointer;
+            }
+        
+            form button:hover {
+              background-color: #4845f3;
+            }
+        
+            .btn-back {
+              display: block;
+              margin-top: 10px;
+              text-align: center;
+              color: #4845f3;
+              text-decoration: none;
+              font-size: 14px;
+            }
+        
+            .btn-back:hover {
+              text-decoration: underline;
+            }
+          </style>
+        </head>
+        <body>
+        
+          <div class="container">
+            <h2>Update Stok</h2>
+            <form action="{{ url('Stok-Update', $Sto->id) }}"method="post">
+                {{csrf_field()}}
+              <!-- Nama Barang -->
+              <label for="Nama">Nama Produk</label>
+              <input type="text" id="Nama" name="Nama" placeholder="Masukkan nama Produk"  value ="{{$Sto->Nama}}"/>
+        
+              <!-- Kategori -->
+              <label for="Kategori">Kategori</label>
+              <select id="Kategori" name="Kategori" value ="{{$Sto->Kategori}}">
+                <option value="">Pilih kategori</option>
+                <option value="Makanan">Makanan</option>
+                <option value="Obat">Obat</option>
+                <option value="Accessoris">Accessoris</option>
+                <option value="Lainnya">Lainnya</option>
+              </select>
+        
+              <!-- Harga -->
+              <label for="Harga">Harga</label>
+              <input type="number" id="Harga" name="Harga" placeholder="Masukkan harga barang"  value ="{{$Sto->Harga}}"/>
+        
+              <!-- Stok -->
+              <label for="Supplier">Nama Supplier</label>
+              <input type="text" id="Supplier" name="Supplier" placeholder="Masukkan nama Supplier" value ="{{$Sto->Supplier}}" />
+
+              <label for="Stok">Stok</label>
+              <input type="number" id="Stok" name="Stok" placeholder="Masukkan Jumlah Stok"  value ="{{$Sto->Stok}}"/>
+        
+              <!-- Tombol Submit -->
+              <button type="submit">Simpan</button>
+            </form>
+        
+            <!-- Tombol Kembali -->
+            <a href="Stok" class="btn-back">Kembali ke Stok</a>
+          </div>
+        
+        </body>
+        </html>
             <!-- End Col -->
           
                         </td>
@@ -519,15 +492,15 @@
     <!-- ======== main-wrapper end =========== -->
 
     <!-- ========= All Javascript files linkup ======== -->
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/Chart.min.js"></script>
-    <script src="assets/js/dynamic-pie-chart.js"></script>
-    <script src="assets/js/moment.min.js"></script>
-    <script src="assets/js/fullcalendar.js"></script>
-    <script src="assets/js/jvectormap.min.js"></script>
-    <script src="assets/js/world-merc.js"></script>
-    <script src="assets/js/polyfill.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/js/Chart.min.js') }}"></script>
+    <script src="{{ asset('assets/js/dynamic-pie-chart.js') }}"></script>
+    <script src="{{ asset('assets/js/moment.min.js') }}"></script>
+    <script src="{{ asset('assets/js/fullcalendar.js') }}"></script>
+    <script src="{{ asset('assets/js/jvectormap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/world-merc.js') }}"></script>
+    <script src="{{ asset('assets/js/polyfill.js') }}"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
 
     <script>
       // ======== jvectormap activation
